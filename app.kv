@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 15
+
+    canvas.before:
+        Color:
+            rgba: 0.2, 0.3, 0.4, 1  # Dark blue background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        id: heading_label
+        text: "Spam Call Identifier"
+        font_size: 24
+        bold: True
+        color: 1, 1, 1, 1  # White text
+        size_hint: 1, 0.2
+
+    Label:
+        id: status_label
+        text: "Upload an audio file"
+        font_size: 18
+        color: 0.9, 0.9, 0.9, 1  # Light grey text
+        size_hint: 1, 0.2
+
+    Button:
+        text: "Upload Audio"
+        font_size: 18
+        size_hint: 1, 0.2
+        background_color: 0.1, 0.5, 0.8, 1  # Light blue
+        on_press: app.open_file_chooser()
