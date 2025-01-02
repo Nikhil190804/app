@@ -15,7 +15,7 @@ class App(App):
             feature_set=opensmile.FeatureSet.eGeMAPSv02,
             feature_level=opensmile.FeatureLevel.Functionals,
         )
-        self.model = self.load_model("models/5s_Logistic_Regression.pkl")
+        self.model = self.load_model("5s_Logistic_Regression.pkl")
         return self.root
     
     def load_model(self, model_path):
